@@ -26,7 +26,11 @@ class UpdateProductsRequest extends FormRequest
         //validate the request
         return [
             'product' => ['required', 'string', 'max:255'],
-            'price' => ['required', 'numeric'],
+            'batch_id' => ['required', 'string', 'max:50'],
+            'category' => ['required', 'in:Fruits,Vegetables,Dairy,Meat,Leafy Greens'],
+            'quantity' => ['required', 'string', 'max:50'],
+            'price' => ['required', 'numeric', 'min:0'],
+            'expiry_date' => ['required', 'date'],
         ];
     }
 

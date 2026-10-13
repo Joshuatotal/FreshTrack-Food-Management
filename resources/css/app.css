@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .gradient-hero {
+        background: radial-gradient(circle at 20% 20%, #DCFCE7 0%, #F0FDF4 45%, #FFFFFF 100%);
+    }
+
+    .gradient-panel {
+        background:
+            radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 45%),
+            radial-gradient(circle at 85% 90%, rgba(249, 115, 22, 0.15) 0%, transparent 50%),
+            linear-gradient(135deg, #065F46 0%, #047857 55%, #059669 100%);
+    }
+}
